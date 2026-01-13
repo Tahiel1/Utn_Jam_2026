@@ -199,8 +199,8 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1.28, y: 1.28}
+  m_DrawMode: 2
+  m_Size: {x: 21.09, y: 14.65}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -407,7 +407,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 1000.34
   field of view: 34
   orthographic: 1
   orthographic size: 5
@@ -552,6 +552,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1856658346 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1161554166564164968, guid: 8f84aa364944e264cb5936283950e7f7, type: 3}
+  m_PrefabInstance: {fileID: 2558892635300341610}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1856658352
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856658346}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 955a7838dc5de4a42bc237e8b31826d0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &2558892635300341610
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -561,12 +588,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 489855338763512977, guid: 8f84aa364944e264cb5936283950e7f7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4.8896894
+      objectReference: {fileID: 0}
+    - target: {fileID: 489855338763512977, guid: 8f84aa364944e264cb5936283950e7f7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5.3743963
+      objectReference: {fileID: 0}
+    - target: {fileID: 489855338763512977, guid: 8f84aa364944e264cb5936283950e7f7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.93
+      value: 2.7665
       objectReference: {fileID: 0}
     - target: {fileID: 489855338763512977, guid: 8f84aa364944e264cb5936283950e7f7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.14
+      value: 0.8093
       objectReference: {fileID: 0}
     - target: {fileID: 489855338763512977, guid: 8f84aa364944e264cb5936283950e7f7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -604,10 +639,37 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cucaracha
       objectReference: {fileID: 0}
+    - target: {fileID: 4031559273140907919, guid: 8f84aa364944e264cb5936283950e7f7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -8185472855418347614, guid: d928c1c83c7182b44bfeaf125362ea51, type: 3}
+    - target: {fileID: 4031559273140907919, guid: 8f84aa364944e264cb5936283950e7f7, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4031559273140907919, guid: 8f84aa364944e264cb5936283950e7f7, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4031559273140907919, guid: 8f84aa364944e264cb5936283950e7f7, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626272774811100812, guid: 8f84aa364944e264cb5936283950e7f7, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626272774811100812, guid: 8f84aa364944e264cb5936283950e7f7, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.32
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1161554166564164968, guid: 8f84aa364944e264cb5936283950e7f7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1856658352}
   m_SourcePrefab: {fileID: 100100000, guid: 8f84aa364944e264cb5936283950e7f7, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
