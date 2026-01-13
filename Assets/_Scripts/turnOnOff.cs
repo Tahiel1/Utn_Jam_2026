@@ -3,7 +3,7 @@ using UnityEngine.Rendering.Universal;
 
 public class LightToggler : MonoBehaviour
 {
-    public Light2D the_light;
+    [SerializeField] private Light2D the_light;
     private float turnedOn = 1f;
     private float turnedOff = 0.01f;
 
