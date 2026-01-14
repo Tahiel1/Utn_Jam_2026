@@ -21,7 +21,7 @@ public class CucarachaMovement : MonoBehaviour
         if (find_light != null)
             the_light = find_light.GetComponent<Light2D>();
         else
-            Debug.LogWarning("No se encontr� una luz");
+            Debug.LogWarning("No se encontro una luz");
     }
     void FixedUpdate()
     {

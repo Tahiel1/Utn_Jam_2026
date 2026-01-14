@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 8626272774811100812}
   - component: {fileID: 7378813861951791760}
   - component: {fileID: 8806127765280433688}
+  - component: {fileID: 2324201133670796394}
   m_Layer: 0
   m_Name: Cucaracha
-  m_TagString: Untagged
+  m_TagString: Cucaracha
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -200,3 +201,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2324201133670796394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161554166564164968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4078bdde526a6a5409eb90c2f10d3625, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
