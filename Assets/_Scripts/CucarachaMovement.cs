@@ -4,12 +4,18 @@ using UnityEngine.Rendering.Universal;
 public class CucarachaMovement : MonoBehaviour
 {
     [SerializeField] private Light2D the_light;
-    private float speed=0f;
+    private float speedMov=0f;
+    private float movOn = 2f;
+    private float movOff = 0f;
     private Rigidbody2D m_Rigidbody;
+    [SerializeField] private Animator anim;
+
     void Start()
     {
         //encontrar mi  rigidbody
         m_Rigidbody = GetComponent<Rigidbody2D>();
+        //Encuntrar la animación
+        anim=gameObject.GetComponent<Animator>();
         //Encontrar luz
         GameObject find_light = GameObject.FindWithTag("light");
         if (find_light != null)
@@ -19,14 +25,30 @@ public class CucarachaMovement : MonoBehaviour
     }
     void FixedUpdate()
     {
-        Vector2 direction = transform.up;
-        m_Rigidbody.linearVelocity = direction * speed;
+        cucaMoveForward();
     }
     private void Update()
     {
+        seeLight();
+    }
+
+    private void seeLight()
+    {
         if (the_light.intensity == 1)
-            speed = 2f;
+        {
+            speedMov = movOn;
+            anim.speed = 1f;
+        }
         else
-            speed = 0f;
+        {
+            speedMov = movOff;
+            anim.speed = 0f;
+        }
+    }
+
+    private void cucaMoveForward()
+    {
+        Vector2 direction = transform.up;
+        m_Rigidbody.linearVelocity = direction * speedMov;
     }
 }
