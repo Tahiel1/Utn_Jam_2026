@@ -4,6 +4,7 @@ public class killOnClick : MonoBehaviour
 {
     [SerializeField] private Light2D the_light;
     private float turnedOn = 1f;
+    [SerializeField] private GameObject pointSystem;
 
     private void Start()
     {
@@ -16,6 +17,9 @@ public class killOnClick : MonoBehaviour
     void OnMouseDown()
     {
         if (the_light.intensity == turnedOn)
+        {
             Destroy(gameObject);
+            pointSystem.GetComponent<pointSystem>().AddPoints();
+        }
     }
 }
