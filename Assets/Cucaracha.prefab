@@ -105,6 +105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   the_light: {fileID: 0}
+  movOn: 10
   anim: {fileID: 0}
 --- !u!61 &8626272774811100812
 BoxCollider2D:

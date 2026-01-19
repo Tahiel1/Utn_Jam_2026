@@ -1,24 +1,24 @@
-using UnityEditor.Experimental.GraphView;
+
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.InputSystem;
+
+
+
 
 public class Weapons : MonoBehaviour
 {
-    private Camera Cam;
-    private  Vector2 mousePos;
-    [SerializeField]private int SpeedPointer;
-
     private void Start()
     {
-        Cam = Camera.main;
+        Cursor.visible = false;
     }
 
     private void Update()
     {
-        Vector2 MouseWorldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 position = MouseWorldPoint - (Vector2)transform.position;
-        transform.up = Vector2.MoveTowards(transform.up, position, SpeedPointer * Time.deltaTime);
+        
+        Vector3 mousePos = Input.mousePosition;
 
+        mousePos.z = 10f; // distancia a la cámara
 
+        transform.position = Camera.main.ScreenToWorldPoint(mousePos);
     }
 }

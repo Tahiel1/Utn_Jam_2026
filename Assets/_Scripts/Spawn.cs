@@ -81,7 +81,8 @@ public class Spawn : MonoBehaviour
                 QuaternionInsect = Mathf.Atan2(DirectionInsect.y, DirectionInsect.x) * Mathf.Rad2Deg;
                 Quaternion RotationInsect = Quaternion.Euler(0, 0, QuaternionInsect);
                 SpawnLocation = new Vector3(MaxX, MaxY, 0);
-                Instantiate(Insect, SpawnLocation, RotationInsect);
+                //Instantiate(Insect, SpawnLocation, RotationInsect);
+                Instantiate(Insect, transform.position, RotationInsect);
             }
             else
             {

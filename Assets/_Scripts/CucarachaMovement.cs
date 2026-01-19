@@ -5,7 +5,7 @@ public class CucarachaMovement : MonoBehaviour
 {
     [SerializeField] private Light2D the_light;
     private float speedMov=0f;
-    private float movOn = 2f;
+    [SerializeField] private float movOn = 2f;
     private float movOff = 0f;
     private Rigidbody2D m_Rigidbody;
     [SerializeField] private Animator anim;
