@@ -7,9 +7,13 @@ public class pointSystem : MonoBehaviour
     [SerializeField] private TextMeshProUGUI pointText;
     [SerializeField] private int currentPoints=0;
     [SerializeField] private int pointsToAdd=10;
-    [SerializeField] private int pointsToSubtract=5;
+    [SerializeField] private int lifes;
+    [SerializeField] private GameObject life1;
+    [SerializeField] private GameObject life2;
+    [SerializeField] private GameObject life3;
     private void Start()
     {
+        lifes= 3;
         pointText = pointSystemOb.GetComponent<TextMeshProUGUI>();
         pointText.text = currentPoints.ToString();
     }
@@ -17,10 +21,44 @@ public class pointSystem : MonoBehaviour
     {
         currentPoints += pointsToAdd;
         pointText.text = currentPoints.ToString();
+        lifes++;
+        showsLife(lifes);
     }
-    public void SubtractPoints()
+    public void SubtractLife()
     {
-        currentPoints -= pointsToSubtract;
-        pointText.text = currentPoints.ToString();
+        lifes--;
+        showsLife(lifes);
+    }
+
+    public void showsLife(int lifes)
+    {
+        switch (lifes)
+        {
+            case 3:
+                life3.SetActive(true);
+                life2.SetActive(true);
+                life1.SetActive(true);
+                break;
+            case 2:
+                life3.SetActive(false);
+                life2.SetActive(true);
+                life1.SetActive(true);
+                break;
+            case 1:
+                life3.SetActive(false);
+                life2.SetActive(false);
+                life1.SetActive(true);
+                break;
+            case 0:
+                life3.SetActive(false);
+                life2.SetActive(false);
+                life1.SetActive(false);
+                break;
+            default:
+                life3.SetActive(true);
+                life2.SetActive(true);
+                life1.SetActive(true);
+                break;
+        }
     }
 }

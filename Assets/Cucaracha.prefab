@@ -168,6 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   the_light: {fileID: 0}
+  pointSystem: {fileID: 0}
 --- !u!61 &8417105536902519856
 BoxCollider2D:
   m_ObjectHideFlags: 0
